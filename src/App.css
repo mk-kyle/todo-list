@@ -40,7 +40,7 @@ body{
   color: #212121;
   font-weight: bold;
   margin: 0 auto;
-  max-width: 200px;
+  width: 80%;
   height: 100px;
   margin-bottom: 20px;
   font-size: 20px;
@@ -69,14 +69,17 @@ body{
 
 .compl_container{
   width: 100vw;
-  height: 100vh;
-  background-color: #ffffff4a;
+  min-height: 100vh;
+  background-color: #ffebee45;
+  color: red;
 }
 
 .uncompl_container{
   width: 100vw;
-  height: 100vh;
-  background-color: #ffffff4a;
+  min-height: 100vh;
+  background-color: #f1f8e954;
+  border-left: 1px solid #212121;
+  color: green;
 }
 
 .cells_container{
