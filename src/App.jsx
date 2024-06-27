@@ -3,7 +3,7 @@ import './App.css';
 import { useState } from 'react';
 import Todos from './componant/todoApp';
 import CmplTodos from './componant/cmplTodos';
-import {NotificationContainer, NotificationManager} from 'react-notifications';
+import { NotificationContainer, NotificationManager } from 'react-notifications';
 
 
 
@@ -27,11 +27,9 @@ function App() {
     setTodoList([...todoList, todoObj])
   }
 
-  const deletHandler = (itemsId) => {
-    setTodoList(todoList.filter((items) => itemsId !== items.id))
-    NotificationManager.error('One UnCompleted Item', 'You Removed !', 5000, () => {
-      alert('callback');
-    }); 
+  const deletHandler = (items) => {
+    setTodoList(todoList.filter((item) => items.id !== item.id))
+    NotificationManager.error(`Removed !`, `${items.title}`, 2000, () => todoList.map(() => setTodoList([...todoList])));
   }
 
   function compleHandler(item) {
@@ -41,7 +39,7 @@ function App() {
 
   function removeHandle(items) {
     setCmplTodoList(cmplTodoList.filter((item) => items.id !== item.id))
-    NotificationManager.warning('One Completed Item', 'You Removed !', 3000);
+    NotificationManager.warning(`Removed !`, `${items.title}`, 3000);
   }
 
   function cmplHandle(item) {
@@ -69,7 +67,7 @@ function App() {
           <CmplTodos cmplTodoList={cmplTodoList} cmplHandle={cmplHandle} removeHandle={removeHandle} />
         </div>
       </div>
-      <NotificationContainer/>
+      <NotificationContainer />
 
     </div>
   );
