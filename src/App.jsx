@@ -29,7 +29,7 @@ function App() {
 
   const deletHandler = (items) => {
     setTodoList(todoList.filter((item) => items.id !== item.id))
-    NotificationManager.error(`Removed !`, `${items.title}`, 2000, () => todoList.map(() => setTodoList([...todoList])));
+    NotificationManager.error(`Removed !`, `${items.title}`, 2000, () => setTodoList([...todoList]));
   }
 
   function compleHandler(item) {
