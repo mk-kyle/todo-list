@@ -3,8 +3,10 @@
 }
 
 body {
-  background-color: lightgray;
-  height: 100vh;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  background-color: #EEEEEE;
 }
 
 .todo-input {
@@ -36,7 +38,7 @@ body {
   align-items: center;
   gap: 10px;
   border-radius: 20px;
-  background-color: #BDBDBD;
+  background-color: #EEEEEE;
   color: #212121;
   font-weight: bold;
   font-size: 18px;
@@ -44,6 +46,8 @@ body {
   width: 80%;
   margin-bottom: 20px;
   padding: 10px 0px;
+  box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.2);
+
 }
 
 .btns_container {
@@ -70,16 +74,18 @@ body {
 .compl_container {
   width: 100vw;
   min-height: 100vh;
-  background-color: #ffebee45;
-  color: red;
+  background-image: linear-gradient(#ffebee00, #ef9a9a51);
+  border-right: 2px solid #BDBDBD;
+  border-radius: 20px;
+
 }
 
 .uncompl_container {
   width: 100vw;
   min-height: 100vh;
-  background-color: #f1f8e954;
-  border-left: 10px solid #BDBDBD;
-  color: green;
+  background-image: linear-gradient(#e8f5e900, #a5d6a752);
+  border-left: 2px solid #BDBDBD;
+  border-radius: 20px;
 }
 
 .cells_container {
