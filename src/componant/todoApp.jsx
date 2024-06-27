@@ -1,3 +1,6 @@
+import 'react-notifications/lib/notifications.css';
+
+
 const Todos = ({ todoList, compleHandler, deletHandler }) => {
     return (
         todoList.map((items, index) => {
